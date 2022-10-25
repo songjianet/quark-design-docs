@@ -44,7 +44,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, onMounted, reactive, toRefs } from "vue";
-import { demoUrl, nav } from "@/config/index";
+import { demoUrl as defaultUrl,  nav } from "@/config/index";
 import {
   onBeforeRouteUpdate,
   RouteLocationNormalized,
@@ -159,7 +159,8 @@ export default defineComponent({
       data.curKey = isReact(to) ? "react" : "vue";
       componentTitle(to);
     });
-
+    const demoUrl = import.meta.env.VITE_ENV === 'dev' ? 'https://quark-design.hellobike.com/demo/demo.html#' : defaultUrl
+    console.log(import.meta.env, 'ENV')
     return {
       ...toRefs(state),
       ...toRefs(data),
