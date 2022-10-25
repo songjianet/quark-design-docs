@@ -1,6 +1,6 @@
 {
-  "name": "AppQuarkDoc",
-  "version": "1.7.0",
+  "name": "QuarkDesignDoc",
+  "version": "1.0.0",
   "description": "Mobile UI Components built on Web Components.",
   "keywords": [
     "web components",
@@ -8,15 +8,8 @@
     "shadow dom",
     "custom element"
   ],
-  "author": "xushunfa",
+  "author": "hello",
   "license": "MIT",
-  "files": [
-    "dist",
-    "README.md",
-    "package.json",
-    "LICENSE",
-    "CHANGELOG.md"
-  ],
   "scripts": {
     "dev": "tsc && vite --force",
     "build": "vite build",
