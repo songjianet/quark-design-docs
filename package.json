@@ -1,5 +1,5 @@
 {
-  "name": "QuarkDesignDoc",
+  "name": "quark-design-docs",
   "version": "1.0.0",
   "description": "Mobile UI Components built on Web Components.",
   "keywords": [
@@ -8,7 +8,7 @@
     "shadow dom",
     "custom element"
   ],
-  "author": "hello",
+  "author": "hbf2e",
   "license": "MIT",
   "scripts": {
     "dev": "tsc && vite --force",
