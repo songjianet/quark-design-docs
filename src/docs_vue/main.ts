@@ -1,0 +1,28 @@
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import i18n from "@/lang";
+import { isMobile } from "@/assets/util";
+// import Particles from 'particles.vue3';
+// 全局样式初始化
+import "@/assets/styles/reset.scss";
+// demo 文档样式
+import "@/assets/styles/md-style.scss";
+
+if (isMobile) {
+  location.replace("/demo/demo.html" + location.hash);
+}
+
+const app = createApp(App);
+app.use(i18n);
+app.use(router);
+// app.use(Particles)
+app.mount("#doc");
+
+// app.config.errorHandler = (err: any, vm, info) => {
+//   // 处理错误
+//   // `info` 是 Vue 特定的错误信息，比如错误所在的生命周期钩子
+//   console.log(err, 'quarkui.config.errorHandler err------>')
+//   console.log(vm, 'quarkui.config.errorHandler vm------>')
+//   console.log(info, 'quarkui.config.errorHandler info------>')
+// }
