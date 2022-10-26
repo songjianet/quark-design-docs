@@ -1,6 +1,5 @@
 <template>
   <div class="min-h-[800px] bg-white dark:bg-gray-900 doc-content-document full">
-    <h2>说明</h2>
     <blockquote><p>本站就 React/Vue 有单独说明，其它技术栈可以参考 Vue 文档。</p></blockquote>
     <p><a href="https://quark-design.hellobike.com/#/zh-CN/component/button">点击查看 Vue 文档</a></p>
 
@@ -42,7 +41,6 @@
         <span class="hljs-meta"># </span>npm i quarkd
       </code>
     </pre>
-    
     <h2>特别说明：React 项目</h2>
     <p>由于需要 React 事件系统有别于其他技术框架，源码中我们将 React 组件进行了 Reactify(React 化)！因此推荐使用 `@quarkd/quarkd-react`。</p>
     <pre>
