@@ -10,13 +10,13 @@
 
 ```shell
 # Vue / Angular / HTML / 其它前端技术栈
-npm i quark
+npm i quarkd
 
 # React 项目
-npm i quark-react
+npm i @quarkd/quark-react
 ```
 
-由于 React 不允许标签/组件出现 `-` （如：`<custom-button />`），所以需要对 `quark` 进行额外处理。
+`@quarkd/quark-react` 底层依赖 `quarkd` ,优化了在 React 项目中组件事件需要手动 addEventListener 问题。
 
 ## 1、使用示例 Vue
 

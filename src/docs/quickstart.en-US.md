@@ -9,11 +9,11 @@
 ## NPM Install
 
 ```shell
-# Vue project
-npm i quark
+# Vue / Angular / HTML / Other project
+npm i quarkd
 
 # React project
-npm i quark-react
+npm i  @quarkd/quark-react
 ```
 
 ## 1.Example Vue
