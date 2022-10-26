@@ -18,18 +18,11 @@
         <div class="flex items-center justify-between gap-8">
           <!-- 其它技术栈文档 -->
           <div class="nav-item">
-            <template v-if="docMd === 'react'">
-              <a class="transition-colors hover:text-gray-700 dark:hover:text-gray-400" @click="openDialog">
-                {{ isZhLang ? '其它技术文档': 'otherdocs' }}
-              </a>
-            </template>
-            <template v-else>
-              <a class="transition-colors hover:text-gray-700 dark:hover:text-gray-400"
+            <a class="transition-colors hover:text-gray-700 dark:hover:text-gray-400"
                 :class="isActive('pages') ? 'text-gray-900 dark:text-gray-400 111' : 'text-gray-400 dark:text-gray-500'"
                 :href="`${isZhLang ? `#/zh-CN/pages/otherdocs` : `#/en-US/pages/otherdocs`}`">
                 {{ isZhLang ? '其它技术文档': 'otherdocs' }}
               </a>
-            </template>
           </div>
 
           <!-- 指南 / 组件 -->
