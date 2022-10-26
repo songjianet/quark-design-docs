@@ -7,7 +7,7 @@
 ### 安装使用
 
 ```tsx
-import { Uploader,UploaderRef } "@quarkd/quark-react";
+import { Uploader,UploaderRef } "quark-react";
 ```
 
 ### 基础用法
