@@ -50,12 +50,17 @@ npm i @quarkd/quark-react</code>
       </div>
     </div>
 
-  <h2>Polyfill</h2>
-  <blockquote><p>Quark(Web components) 支持现代浏览器，如需兼容更低版本（ iOS 10 以下，Android 7 以下），请在 HTML 头部加入 polyfill。</p></blockquote>
-  <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://m.hellobike.com/resource/helloyun/15697/wcs-bundle.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-</code></pre>
-  <p>上面 cdn 同官方Polyfill <a href="https://www.webcomponents.org/polyfills">点击查看更多</a>。</p>
-    </div>
+    <h2>Polyfill</h2>
+    <blockquote><p>Quark(Web components) 支持现代浏览器，如需兼容更低版本（ iOS 10 以下，Android 7 以下），请在 HTML 头部加入 polyfill。</p></blockquote>
+    <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://m.hellobike.com/resource/helloyun/15697/wcs-bundle.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+    <p>上面 cdn 同官方Polyfill <a href="https://www.webcomponents.org/polyfills">点击查看更多</a>。</p>
+    <h2>React 项目特别说明</h2>
+    <p>1：由于 `quarkd` 提供的组件均为原生自定义元素（类比div），因此组件派发的事件需要使用addEventLisener接收。</p>
+    <br/>
+    <p>2：Vue 技术栈使用 `@xx` 即可接收原生派发的事件，因此不需要使用addEventLisener接收。</p>
+    <br/>
+    <p>3：针对 React 技术栈，为了避免开发者手动 addEventLisener 接收事件，我们底层依托 `quarkd` ，上层进行了 Reactify(React 化)！因此 React 项目推荐使用 `@quarkd/quark-react`。</p>
+  </div>
 </template>
 <script lang="ts">
   import { defineComponent, onMounted, reactive, toRefs, ref } from "vue";

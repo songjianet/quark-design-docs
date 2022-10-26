@@ -41,8 +41,12 @@
         <span class="hljs-meta"># </span>npm i quarkd
       </code>
     </pre>
-    <h2>特别说明：React 项目</h2>
-    <p>由于需要 React 事件系统有别于其他技术框架，源码中我们将 React 组件进行了 Reactify(React 化)！因此推荐使用 `@quarkd/quarkd-react`。</p>
+    <h2>React 项目特别说明</h2>
+    <p>1：由于 `quarkd` 提供的组件均为原生自定义元素（类比div），因此组件派发的事件需要使用addEventLisener接收。</p>
+    <br/>
+    <p>2：Vue 技术栈使用 `@xx` 即可接收原生派发的事件，因此不需要使用addEventLisener接收。</p>
+    <br/>
+    <p>3：针对 React 技术栈，为了避免开发者手动 addEventLisener 接收事件，我们底层依托 `quarkd` ，上层进行了 Reactify(React 化)！因此 React 项目推荐使用 `@quarkd/quark-react`。</p>
     <pre>
       <code style="padding: 0;">
         <span class="hljs-meta"># </span>npm i @quarkd/quark-react
