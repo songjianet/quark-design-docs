@@ -20,7 +20,7 @@ import { Button } from "@quarkd/quark-react";
 
 ```js
 module.exports = {
-  plugins: [["import", { libraryName: "quark-react" }]],
+  plugins: [["import", { libraryName: "@quarkd/quark-react" }]],
 };
 ```
 

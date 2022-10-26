@@ -20,7 +20,7 @@ config `.babelrc`
 
 ```js
 module.exports = {
-  plugins: [["import", { libraryName: "quark-react" }]],
+  plugins: [["import", { libraryName: "@quarkd/quark-react" }]],
 };
 ```
 

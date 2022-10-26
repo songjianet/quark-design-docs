@@ -44,21 +44,3 @@ export default {
   ],
 };
 ```
-
-## React+TS
-
-React+TS 工程中使用 `quark` 可能会出现如下**告警**：
-
-```
-类型“JSX.IntrinsicElements”上不存在属性 xx
-```
-
-这是由于自定义标签，为了避免出现这个告警，可以设置标签类型
-
-```
-declare namespace JSX {
-  interface IntrinsicElements {
-    [tag: string]: any;
-  }
-}
-```

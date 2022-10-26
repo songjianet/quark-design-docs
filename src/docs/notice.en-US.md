@@ -44,21 +44,3 @@ export default {
   ],
 };
 ```
-
-## React+TS
-
-React+TS project using `quark` component may appear **warning**：
-
-```
-Property xx does not exist on type 'JSX.IntrinsicElements'
-```
-
-This is due to the custom label, in order to avoid this warning, you can set the label type.
-
-```
-declare namespace JSX {
-  interface IntrinsicElements {
-    [tag: string]: any;
-  }
-}
-```
