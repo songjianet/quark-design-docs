@@ -94,7 +94,7 @@ export default defineComponent({
     });
 
     const isShow = () => {
-      return !route.path.includes("guide");
+      return !(route.path.includes("guide") || route.path.includes("pages"));
     };
 
     const watchDemoUrl = (router: RouteLocationNormalized) => {

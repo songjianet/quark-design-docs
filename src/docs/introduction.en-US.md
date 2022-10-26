@@ -21,6 +21,8 @@ Quark is a set of cross-frame UI component library based on Web Components, whic
 
 ## Support environment
 
+> For compatibility with lower versions, please use official [polyfills][def]
+
 - Android 7.0+
 - iOS 10.2+
 

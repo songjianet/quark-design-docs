@@ -21,6 +21,8 @@ Quark 是一套基于 Web Components 的跨框架 UI 组件库，输出标准的
 
 ## 支持环境
 
+> 如需兼容更低版本，请使用官方 [Polyfills][def]
+
 - Android 7.0+
 - iOS 10.2+
 
@@ -34,3 +36,6 @@ Quark 是一套基于 Web Components 的跨框架 UI 组件库，输出标准的
 ## 开源协议
 
 本项目基于 MIT 协议
+
+
+[def]: https://www.webcomponents.org/polyfills

@@ -5,6 +5,7 @@ import Main from "@/views/Main.vue";
 import Guide from "@/views/Guide.vue";
 import Component from "@/views/Component.vue";
 import QuickStart from "@/views/quickStart/index.vue";
+import OtherDocs from "@/views/otherdocs/index.vue";
 
 const pagesRouter: Array<RouteRecordRaw> = [];
 const pagesEnRouter: Array<RouteRecordRaw> = [];
@@ -99,6 +100,20 @@ const routes: Array<RouteRecordRaw> = [
     name: "index",
     component: Index,
     children: [
+      {
+        path: '/zh-CN/pages/otherDocs',
+        name: 'pages',
+        component: Guide,
+        children: [{
+          path: `/zh-CN/pages/otherDocs`,
+          component: OtherDocs,
+          name: `zh-CN/pages/otherDocs`,
+        }, {
+          path: `/en-US/pages/otherDocs`,
+          component: OtherDocs,
+          name: `en-US/pages/otherDocs`,
+        }]
+      },
       {
         path: "/zh-CN/guide",
         name: "guide",

@@ -1,8 +1,8 @@
 <template>
-  <div class="doc-nav w-[260px] border-r border-solid border-gray-200 dark:border-gray-800 overflow-auto fixed left-0 bottom-0 z-10 transition-all" :class="{ 'fixed-class': fixed }">
+  <div v-if="isShowSideBar()" class="doc-nav w-[260px] border-r border-solid border-gray-200 dark:border-gray-800 overflow-auto fixed left-0 bottom-0 z-10 transition-all" :class="{ 'fixed-class': fixed }">
 
     <!-- Doc‘s Switch -->
-    <div class="sticky bg-white dark:bg-gray-900 top-0 px-8 pt-4 z-[1]">
+    <div class="sticky bg-white dark:bg-gray-900 top-0 pt-4 px-2 z-[1]">
       <div v-if="isShow()" class="grid items-center justify-between h-[40px] rounded bg-zinc-100 dark:bg-gray-700 px-1 grid-cols-2">
         <div
           :class="curKey === item.key ? 'bg-white dark:bg-gray-900' : 'bg-zinc-100 dark:bg-gray-700 dark:text-gray-400'"
@@ -101,6 +101,9 @@ export default defineComponent({
       return !route.path.includes("guide");
     };
 
+    const isShowSideBar = () => {
+      return !(route.path.includes('pages'));
+    }
 
     const isActive = computed(() => {
       return function (name: string) {
@@ -168,6 +171,7 @@ export default defineComponent({
       docs: reactive(docs),
       reorder,
       isShow,
+      isShowSideBar,
       handleTabs,
     };
   },

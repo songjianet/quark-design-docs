@@ -6,7 +6,8 @@
     "web components",
     "quark",
     "shadow dom",
-    "custom element"
+    "custom element",
+    "library ui"
   ],
   "author": "hbf2e",
   "license": "MIT",
