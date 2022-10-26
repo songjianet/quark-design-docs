@@ -43,7 +43,7 @@
       </code>
     </pre>
     <h2>React 项目</h2>
-    <p>由于需要 React 事件系统有别于其他技术框架，源码中我们将 React 组件单独抽离进行处理进行了 Reactify！因此推荐使用 `@quarkd/quarkd-react`。当然您也可以在 React 中直接使用 `quarkd`。</p>
+    <p>由于需要 React 事件系统有别于其他技术框架，源码中我们将 React 组件进行了 Reactify(React 化)！因此推荐使用 `@quarkd/quarkd-react`。当然您也可以在 React 中直接使用 `quarkd`。</p>
     <pre>
       <code style="padding: 0;">
         <span class="hljs-meta"># </span>npm i @quarkd/quark-react
