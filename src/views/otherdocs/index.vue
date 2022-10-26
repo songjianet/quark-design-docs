@@ -52,7 +52,7 @@
 </template>
 <script lang="ts">
   import { defineComponent, onMounted, reactive, toRefs, ref } from "vue";
-  import CodeDemo from "./components/CodeDemo.vue";
+  import CodeDemo from "../components/codedemo/index.vue";
   import "quarkd/lib/button";
   import "quarkd/lib/tab";
 

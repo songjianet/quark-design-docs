@@ -19,6 +19,23 @@ import { html } from "@codemirror/lang-html";
 import { oneDark } from "@codemirror/theme-one-dark";
 
 const codes = {
+  React: `import react, { useState } from 'react'
+import { Button } from 'quark-react'
+
+export default () => {
+  const [loading, setLoading] = useState(false)
+
+  const handleClick = () => {
+    setLoading(true)
+    setTimeout(() => { setLoading(false) }, 2000);
+  }
+
+  return (
+    <Button loading={loading} onClick={handleClick}>
+      Button
+    </Button>
+  )
+}`,
   Vue: `<template>
     <quark-button :loading="loading" @click="handleClick">Button</quark-button>
 </template>
@@ -40,23 +57,6 @@ const codes = {
     }
   })
 <\/script>`,
-  React: `import react, { useState } from 'react'
-import { Button } from '@quarkd/quark-react'
-
-export default () => {
-  const [loading, setLoading] = useState(false)
-
-  const handleClick = () => {
-    setLoading(true)
-    setTimeout(() => { setLoading(false) }, 2000);
-  }
-
-  return (
-    <Button loading={loading} onClick={handleClick}>
-      Button
-    </Button>
-  )
-}`,
   Angular: `import { Component } from '@angular/core
 import "quarkd/lib/button"
 
@@ -96,7 +96,7 @@ export default defineComponent({
   },
   setup(props) {
     const { tabName } = toRefs(props);
-    const code = ref(codes["Vue"]);
+    const code = ref(codes["React"]);
     const extensions = reactive([html(), oneDark]);
 
     onMounted(() => {});
@@ -119,3 +119,4 @@ export default defineComponent({
   },
 });
 </script>
+<style src="./index.scss"></style>

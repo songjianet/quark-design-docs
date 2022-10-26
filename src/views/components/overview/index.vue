@@ -521,4 +521,4 @@
     }
   });
 </script>
-<style src="./componentsOverview.scss"></style>
+<style src="./index.scss"></style>
