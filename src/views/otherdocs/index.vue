@@ -35,15 +35,16 @@
       </div>
     </div>
 
-    <h2>Vue/Angular/无框架项目</h2>
-    <p>Vue/Angular/无框架项目推荐使用 `quarkd` 这个包。</p>
+    <h2>Vue/React/Angular/无框架项目</h2>
+    <p>Vue/React/Angular/无框架项目皆可使用 `quarkd` 这个包。</p>
     <pre>
       <code style="padding: 0;">
         <span class="hljs-meta"># </span>npm i quarkd
       </code>
     </pre>
-    <h2>React 项目</h2>
-    <p>由于需要 React 事件系统有别于其他技术框架，源码中我们将 React 组件进行了 Reactify(React 化)！因此推荐使用 `@quarkd/quarkd-react`。当然您也可以在 React 中直接使用 `quarkd`。</p>
+    
+    <h2>特别说明：React 项目</h2>
+    <p>由于需要 React 事件系统有别于其他技术框架，源码中我们将 React 组件进行了 Reactify(React 化)！因此推荐使用 `@quarkd/quarkd-react`。</p>
     <pre>
       <code style="padding: 0;">
         <span class="hljs-meta"># </span>npm i @quarkd/quark-react
