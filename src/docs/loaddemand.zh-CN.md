@@ -27,5 +27,5 @@ module.exports = {
 或者也可以采用手动按需加载的方式，但不推荐。
 
 ```js
-import Button from "quark-react/lib/button";
+import Button from "@quarkd/quark-react/lib/button";
 ```

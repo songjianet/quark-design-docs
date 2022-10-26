@@ -41,7 +41,7 @@ const codes = {
   })
 <\/script>`,
   React: `import react, { useState } from 'react'
-import { Button } from 'quark-react'
+import { Button } from '@quarkd/quark-react'
 
 export default () => {
   const [loading, setLoading] = useState(false)

@@ -8,6 +8,15 @@ import "@/assets/styles/reset.scss";
 // demo 文档样式
 import "@/assets/styles/md-style.scss";
 
+// 默认中文
+if (localStorage.getItem("language") === null) {
+  localStorage.setItem("language", "zh-CN");
+}
+// 默认 vue 文档
+if (localStorage.getItem("docMd") === null) {
+  localStorage.setItem("docMd", "vue");
+}
+
 if (isMobile) {
   location.replace("/demo/demo.html" + location.hash);
 }
