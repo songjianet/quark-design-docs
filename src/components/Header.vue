@@ -10,7 +10,7 @@
             <img class="h-8" src="/src/assets/images/quark-logo.png" alt="">
           </a>
           <span class="flex items-center mr-8 text-gray-500" href="/">
-            {{data.verson}}
+            {{ version}}
           </span>
           <Search />
         </div>
@@ -77,11 +77,17 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent, reactive, computed } from "vue";
+  import { defineComponent, reactive, computed, onBeforeMount, ref } from "vue";
   import Search from "./Search.vue";
   import { header, versions, nav, docs } from "@/config/index";
-  import { version } from "@/docs_vue/config.json";
+  import { version as defaultVersion } from "@/docs_vue/config.json";
   import { useRoute } from "vue-router";
+  const sdk = window.HBConfigSDKclient.default
+  const client = new sdk ({
+    project: 'QuarkDesign',
+    env: 'pro',
+  })
+ 
 
   export default defineComponent({
     name: "doc-header",
@@ -89,6 +95,7 @@
       Search,
     },
     setup() {
+      const version = ref()
       const isZhLang = localStorage.getItem("language") === "zh-CN" ? true : false;
       const route = useRoute();
       let packages = [];
@@ -98,9 +105,8 @@
 
       let docsList = [];
       docsList = docs.packages.map((item) => item.name.toLowerCase());
-
+     
       const data = reactive({
-        verson: version,
         navIndex: 0,
         activeIndex: 0,
         isShowSelect: false,
@@ -109,10 +115,18 @@
       const handleFocus = () => {
         console.log(1);
       };
+      const getVersion =  async () => {
+        const res = await client.get('info') || {};
+        if(res.version) version.value = res.version
+      }
+      onBeforeMount(() => {
+        getVersion()
+      })
 
       const handleFocusOut = () => {
         data.isShowSelect = false;
       };
+      
 
       const isActive = computed(() => {
         return function (name: string) {
@@ -155,7 +169,6 @@
         }
         window.location.reload();
       }
-
       return {
         docMd: localStorage.getItem("docMd"),
         isZhLang,
