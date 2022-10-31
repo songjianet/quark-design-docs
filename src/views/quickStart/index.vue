@@ -17,6 +17,10 @@ npm i quarkd
 <span class="hljs-meta">#</span><span class="bash"> React 项目</span>
 npm i @quarkd/quark-react</code>
       </pre>
+      <h2>CDN 安装</h2>
+      <pre>
+        <code class="language-shell">https://fastly.jsdelivr.net/npm/quarkd@1.0.11/umd/index.js</code>
+      </pre>
     </div>
 
     <div class="code-demo-container">

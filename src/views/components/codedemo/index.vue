@@ -67,17 +67,19 @@ import "quarkd/lib/button"
 })`,
   Html: `<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <script src="https://fastly.jsdelivr.net/npm/quarkd@1.0.11/umd/index.js" />
+  <script>
+    const el = document.getElementById('btn')
+    el.addEventListener('click', function handleClick() {
+      el.loading = true
+    })
+<\/script>
 <body>
   <quark-button loading="false" id="btn">Button</quark-button>
 </body>
-
-<script src="./node_modules/quarkd/lib/button/index.js" /> // or cdn
-<script>
-  const el = document.getElementById('btn')
-  el.addEventListener('click', function handleClick() {
-    el.loading = true
-  })
-<\/script>
 </html>
   `,
 };
