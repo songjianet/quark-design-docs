@@ -73,10 +73,9 @@ import "quarkd/lib/button"
 
 <script src="./node_modules/quarkd/lib/button/index.js" /> // or cdn
 <script>
-  window.addEventListener(function() {
-    const el = document.getElementById('btn')
+  const el = document.getElementById('btn')
+  el.addEventListener('click', function handleClick() {
     el.loading = true
-    setTimeout(() => { el.loading = true }, 2000);
   })
 <\/script>
 </html>
