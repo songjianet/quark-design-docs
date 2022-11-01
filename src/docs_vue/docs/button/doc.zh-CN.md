@@ -67,7 +67,7 @@ import 'quarkd/lib/button';
 
 ### 加载状态
 
-通过 `loading` 属性设置加载状态，其中`loadingcolor `属性控制loading颜色，`loadingsize `属性控制loading大小，`loadingtype `属性控制loading类型，loading参考loading组件，
+通过 `loading` 属性设置加载状态，其中`loadingcolor `属性控制loading颜色，`loadingsize `属性控制loading大小，`loadingtype `属性控制loading类型，loading参考loading组件。
 
 ```html
 <quark-button loading type="danger" loadtype="circular">加载中...</quark-button>
